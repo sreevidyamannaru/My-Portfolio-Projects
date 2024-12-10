@@ -1,18 +1,16 @@
 
-# AWS Terraform Infrastructure
+# Big Data Pipeline
 
-This project demonstrates how to use Terraform to create AWS resources. The current configuration sets up an S3 bucket.
+An ETL pipeline built with PySpark to process large datasets.
 
 ## Steps to Run
 
-1. Install Terraform from [terraform.io](https://www.terraform.io/).
-2. Configure AWS credentials in your environment.
-3. Initialize Terraform in the project directory:
+1. Install PySpark:
    ```
-   terraform init
+   pip install pyspark
    ```
-4. Apply the configuration to create resources:
-   ```
-   terraform apply
-   ```
+2. Run the scripts in the following order:
+   - `data_ingestion.py` to read data.
+   - `transformations.py` to transform the data.
+   - `export.py` to save the results.
             
