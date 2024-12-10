@@ -1,16 +1,19 @@
 
-# Big Data Pipeline
+# Market Risk Analytics API
 
-An ETL pipeline built with PySpark to process large datasets.
+A FastAPI-based service to calculate market risk for financial assets.
 
 ## Steps to Run
 
-1. Install PySpark:
+1. Install dependencies:
    ```
-   pip install pyspark
+   pip install -r requirements.txt
    ```
-2. Run the scripts in the following order:
-   - `data_ingestion.py` to read data.
-   - `transformations.py` to transform the data.
-   - `export.py` to save the results.
+2. Run the application locally:
+   ```
+   uvicorn app.main:app --reload
+   ```
+3. Use the API to calculate risk:
+   - Endpoint: `/risk`
+   - Query parameters: `asset` (string), `exposure` (float)
             
