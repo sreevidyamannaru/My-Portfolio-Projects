@@ -1,19 +1,17 @@
 
-# Market Risk Analytics API
+# Telemetry Logging
 
-A FastAPI-based service to calculate market risk for financial assets.
+This script automates uploading telemetry logs to AWS S3.
 
 ## Steps to Run
 
-1. Install dependencies:
+1. Install AWS CLI and configure credentials.
+2. Install Boto3:
    ```
-   pip install -r requirements.txt
+   pip install boto3
    ```
-2. Run the application locally:
+3. Use the script:
    ```
-   uvicorn app.main:app --reload
+   python upload_logs.py <bucket_name> <file_path>
    ```
-3. Use the API to calculate risk:
-   - Endpoint: `/risk`
-   - Query parameters: `asset` (string), `exposure` (float)
             
